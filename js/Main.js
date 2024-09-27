@@ -131,6 +131,10 @@ document.onkeydown = function(e)
 		{
 			firstLife = 9;
 		}
+		if(e.keyCode == K_H &&  (gameState == STATE_PLAY) )
+		{
+			changeHome(true);
+		}
 		if(e.keyCode == K_2 &&  (gameState == STATE_PLAY || gameState == STATE_STAGE_INIT) ) nextStage();
 		if(e.keyCode == K_1 &&  (gameState == STATE_PLAY) )food.init();
 		if(e.keyCode == K_0 &&  (gameState == STATE_PLAY) )
@@ -210,6 +214,7 @@ function initGame()
 	{
 		addTank(256,385,0,2);
 		player2 = tanks[1];
+		player2.isAIPlayer = true;
 	}
 
 	for(var i = 0; i < playerNum; i ++)
@@ -327,6 +332,8 @@ function keyboardEvent()
 	for(var i = 0; i < playerNum; i ++)
 	{
 		if(tanks[i].live == 0) {continue;}
+		
+		if(tanks[i].isAIPlayer) {continue;}
 
 		if(tanks[i].name == 1)
 		{

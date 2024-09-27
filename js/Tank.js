@@ -391,6 +391,16 @@ function updataTanks()
 	
 	for(var i = 0; i < playerNum; i ++)
 	{
+		if(tanks[i].live == 0) { continue; }
+		
+		if(tanks[i].isAIPlayer)
+		{
+			tanks[i].think(astar_map);
+		}
+		else
+		{
+			
+		}
 		tanks[i].updata();
 	}
 }

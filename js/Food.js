@@ -91,18 +91,3 @@ function updataFood()
 	if(homeTime == 0) {changeHome(false);}
 	if(homeTime >= 0) {homeTime--;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

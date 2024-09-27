@@ -134,8 +134,8 @@ GameStart.prototype.draw = function()
 		graphics.drawImage(imgStart, this.x, this.y, 512, 448);
 
 		graphics.fillStyle = "#FFF";
-		graphics.font = "bold 20px Arial";
-		graphics.fillText("AI By Jules Wang", 10, 425);
+		graphics.font = "bold 16px Arial";
+		graphics.fillText("AI By Jules Wang, 2P AI By px172", 10, 425);
 		gameState = STATE_SELECT;
 		this.init();
 
